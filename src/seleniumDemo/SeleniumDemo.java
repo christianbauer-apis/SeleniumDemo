@@ -26,20 +26,18 @@ public class SeleniumDemo {
 	driver.get("https://www.phptravels.net/login");
 	Thread.sleep(5000);
 	
-	//driver.findElement(By.className("sign-in")).click();
-	//Thread.sleep(5000);
-	//driver.findElement(ByTagName.id("email")).sendKeys(email);
+	
 	driver.findElement(By.name("email")).sendKeys(email);
 	driver.findElement(By.name("password")).sendKeys(password + Keys.ENTER);
-	Thread.sleep(5000);
-	//driver.findElement(By.className("btn-default")).click();
 	Thread.sleep(5000);
 	driver.findElement(By.className("menu-toggler")).click();
 	Thread.sleep(2000);
 	driver.findElement(By.linkText("Flights")).click();
 	Thread.sleep(5000);
-	driver.quit();	
+	driver.get("https://www.phptravels.net/flights/en/usd/cgk/dps/oneway/economy/14-05-2022/1/0/0");
+	Thread.sleep(5000);
 	
+	driver.quit();	
 	
 	
 	try {
